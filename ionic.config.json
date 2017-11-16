@@ -1,0 +1,8 @@
+{
+  "name": "cuentas",
+  "app_id": "ae9cb10f",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
