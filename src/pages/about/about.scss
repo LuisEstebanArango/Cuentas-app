@@ -1,3 +1,10 @@
 page-about {
-
+  #card-month {
+    ion-card-content{
+      padding: 13px 0px !important;
+    }
+  }
+  ion-label {
+    font-size: 18px;
+  }
 }

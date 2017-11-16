@@ -1,11 +1,37 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar  color="primary">
     <ion-title>
-      About
+      Mes actual
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
+
+  <ion-card id="card-month">
+    <ion-card-header>
+      <b>{{title }}</b>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item-sliding *ngFor="let item of monthCurrent">
+          <ion-item>
+            {{ item.description }} <span style="position: absolute; right: 1em;">{{ formatter.format(item.value) }}</span>
+            <br> <span style="color: #777; font-size: 13px">{{ item.date }}</span>
+          </ion-item>
+          <ion-item-options side="left">
+            <button ion-button color="danger" (click)="remove(item)">Eliminar</button>
+          </ion-item-options>
+
+          <ion-item-options side="right">
+            <button ion-button (click)="edit(item)">Editar</button>
+          </ion-item-options>
+        </ion-item-sliding>
+        <ion-item>
+          Total <span style="position: absolute; right: 1em;">{{ total  }}</span>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
 
 </ion-content>
